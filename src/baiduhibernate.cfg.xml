@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--C3P0配置 -->
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.max_size">6</property>
+        <property name="hibernate.c3p0.min_size">3</property>
+        <property name="hibernate.c3p0.timeout">120</property>
+        <!-- <property name="automaticTestTable">Test</property> -->
+        <property name="hibernate.c3p0.max_statements">8</property>
+        <property name="hibernate.c3p0.idle_test_period">120</property>
+        <property name="hibernate.c3p0.acquire_increment">1</property>
+        <property name="c3p0.testConnectionOnCheckout">true</property>
+        <property name="c3p0.idleConnectionTestPeriod">1800</property>
+        <property name="c3p0.maxIdleTime">2500</property>
+        <property name="c3p0.idle_test_period">120</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="connection.url">jdbc:mysql://sqld.duapp.com:4050/jzzLUbJiUOkGqdOwNLxx?characterEncoding=UTF-8</property>
+        <property name="connection.username">kqdAyj8LTtIxKei8DKqLmaPr</property>
+        <property name="connection.password">0WLM8MXpx5SZa3XGWF3oTKGZlfwYf6pD</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property> 
+        <property name="current_session_context_class">thread</property>
+              
+        <mapping class="org.xulingyun.util.WeixinIptv" />
+        <mapping class="org.xulingyun.service.dao.PicText" />
+        <mapping class="org.xulingyun.service.dao.Question" />
+        <mapping class="org.xulingyun.service.dao.Experience" />
+        <mapping class="org.xulingyun.service.dao.Data" />
+        <mapping class="org.xulingyun.service.dao.Guagua" />
+        <!-- <property name="myeclipse.connection.profile">testDb</property> -->
+       	<!--  <mapping resource="DAO/Users.hbm.xml" />
+        <mapping resource="DAO/Products.hbm.xml" />
+        <mapping resource="DAO/Producttype.hbm.xml" />
+		 -->
+    </session-factory>
+
+</hibernate-configuration>

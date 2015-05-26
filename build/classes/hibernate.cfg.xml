@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 连接数据库 -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/myphoto?characterEncoding=UTF-8</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">123456</property>
+        <!--C3P0配置 -->
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.max_size">500</property>
+        <property name="hibernate.c3p0.min_size">20</property>
+        <property name="hibernate.c3p0.timeout">120</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <property name="hibernate.c3p0.idle_test_period">150</property>
+        <property name="hibernate.c3p0.acquire_increment">5</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- <property name="automaticTestTable">Test</property> -->
+        
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property> 
+        <property name="current_session_context_class">thread</property>
+        
+        <mapping class="org.xulingyun.service.dao.Photo" />
+        <mapping class="org.xulingyun.service.dao.Comment" />
+        <mapping class="org.xulingyun.service.dao.User" />
+  <!--  <mapping resource="DAO/Users.hbm.xml" />
+        <mapping resource="DAO/Products.hbm.xml" />
+        <mapping resource="DAO/Producttype.hbm.xml" />
+	-->
+    </session-factory>
+
+</hibernate-configuration>

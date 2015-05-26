@@ -1,0 +1,105 @@
+ .MusicBox
+   {  
+        font: 9px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;
+        background-color: #fff;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+        background-image: -webkit-linear-gradient(top, #fff, #fff);
+        background-image: -moz-linear-gradient(top, #fff, #fff);
+        background-image: -ms-linear-gradient(top, #fff, #fff);
+        background-image: -o-linear-gradient(top, #fff, #fff);
+        background-image: linear-gradient(top, #fff, #fff);
+    
+        /*设置边框的弧度值，为3px*/
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+
+        /*阴影*/
+        text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        -webkit-box-shadow: 10px 10px 25px #fff; 
+        -moz-box-shadow: 10px 10px 25px #fff; 
+        box-shadow: 10px 10px 25px #fff; 
+    
+     /*透明度*/
+     opacity:0.9; 
+     
+     /*基本性质*/
+     padding:2px 5px;
+     position:relative;
+     z-index:9;
+     border-width: 1px;
+     border-style: solid;
+     border-color: #ccc #ccc #ccc #ccc;
+     width:280px;
+     height:40px;
+   }
+   
+   .ProcessControl
+   {
+      width:180px;
+      padding: 5px 10px 10px 10px;
+      float:left; 
+      height:20px;
+      margin-right:12px;
+      color:#ffffff;
+   }
+   
+   .ProcessControl .SongName
+   {
+      float:left;
+   }
+
+   .ProcessControl .SongTime
+   {
+      float:right;      
+   }
+   
+   .ProcessControl .Process
+   {
+     width: 180px;
+     height: 2px;
+     float:left;
+     cursor: pointer;
+     background-color:#c8c8c8;   
+     margin-top:7px;
+   }
+   
+   .ProcessControl .ProcessYet
+   {
+     width: 0px;     
+     height: 2px;
+     float:left;
+     left:65px;
+     top:28px;
+     cursor: pointer;
+     background-color:#73be78; 
+   }
+   
+   .MainControl
+   {
+      width:25px;
+      padding: 10px 15px 5px 10px;
+      float:left; 
+      height:20px;
+      background:url(../images/play.png) no-repeat center;    
+   }
+   
+   .MainControl:hover
+   {
+      background:url(../images/play.png) no-repeat center;
+   }
+   
+   .StopControl
+   {
+      width:14px;
+      padding: 10px 10px 5px 10px;
+      float:left; 
+      height:20px;
+      background:url(../images/stop.png) no-repeat center; 
+      margin-right:16px;   
+   }
+   
+   .StopControl:hover
+   {
+      background:url(../images/stop.png) no-repeat center;
+   }
